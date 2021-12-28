@@ -32,16 +32,20 @@ namespace Evolucio
             this.Controls.Add(ga);
 
 
-            //egy játékos hozzáadása
-            //gc.AddPlayer();
+            /*egy játékos hozzáadása
+            gc.AddPlayer();
 
-            //játék elindítása, gépi vezérlés
-            //gc.Start();
+            játék elindítása, gépi vezérlés
+            gc.Start();
 
-            //játék indítása. Ha mi akarjuk iránytani a játékost:
-            //gc.Start(true);
+            játék indítása. Ha mi akarjuk iránytani a játékost:
+            gc.Start(true);*/
 
-            //több játékos hozzáadása
+
+            //a játék végéhez eseménykezelő létrehozása
+            gc.GameOver += Gc_GameOver;
+
+            //több játékos hozzáadása és elindítása
             for (int i = 0; i < populationSize; i++)
             {
                 gc.AddPlayer(nbrOfSteps);
@@ -50,9 +54,21 @@ namespace Evolucio
             gc.Start();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Gc_GameOver(object sender)
         {
+            //generációk számának növelése
+            generation++;
+            //hányadik generációról van szó? labelre kiírni:
+            generationLabel.Text = string.Format("{0}. generáció", generation);
 
+            //lista létrehozása,mely tartalmazza, hogy ki a legjobb játékos?. Csökkenő sorrendbe kell rendezni
+            var playerList = (from p in gc.GetCurrentPlayers()
+                              orderby p.GetFitness() descending
+                              select p);
+
+            //hogyan lehet a legjobbakat megkapni?
+            var topplayers = playerList.Take(populationSize / 2).ToList();
         }
+
     }
 }
