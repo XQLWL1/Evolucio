@@ -25,6 +25,9 @@ namespace Evolucio
         int nbrOfStepsIncrement = 10;
         int generation = 1;
 
+        //győztes kiválasztása
+        Brain winnerBrain;
+
         public Form1()
         {
             InitializeComponent();
@@ -107,6 +110,18 @@ namespace Evolucio
 
             //újabb kör indítása
             gc.Start();
+
+            //hányan nyerték meg?
+            var winners = from p in topplayers
+                          where p.IsWinner
+                          select p;
+
+            if (winners.Count()>0)
+            {
+                winnerBrain = winners.FirstOrDefault().Brain.Clone();
+                gc.GameOver -= Gc_GameOver;
+                return;
+            }
         }
 
     }
