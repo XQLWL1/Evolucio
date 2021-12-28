@@ -19,12 +19,21 @@ namespace Evolucio
         GameController gc = new GameController();
         GameArea ga = new GameArea();
 
-
         public Form1()
         {
             InitializeComponent();
             ga = gc.ActivateDisplay();
             this.Controls.Add(ga);
+
+
+            //játékos hozzáadása
+            gc.AddPlayer();
+
+            //játék elindítása
+            //gc.Start();
+
+            //játék indítása. Ha mi akarjuk iránytani a játékost:
+            //gc.Start(true);
         }
 
         private void Form1_Load(object sender, EventArgs e)
