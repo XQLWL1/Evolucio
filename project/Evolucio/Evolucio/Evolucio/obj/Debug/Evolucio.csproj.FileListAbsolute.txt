@@ -1,0 +1,12 @@
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\bin\Debug\Evolucio.exe.config
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\bin\Debug\Evolucio.exe
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\bin\Debug\Evolucio.pdb
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\bin\Debug\WorldsHardestGame.dll
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.csprojAssemblyReference.cache
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.Form1.resources
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.Properties.Resources.resources
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.csproj.GenerateResource.cache
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.csproj.CoreCompileInputs.cache
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.csproj.CopyComplete
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.exe
+C:\Users\Vivi\source\repos\XQLWL1\Evolucio\project\Evolucio\Evolucio\Evolucio\obj\Debug\Evolucio.pdb
