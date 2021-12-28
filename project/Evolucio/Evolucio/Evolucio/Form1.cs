@@ -116,13 +116,36 @@ namespace Evolucio
                           where p.IsWinner
                           select p;
 
+            /*TESZTELÉSHEZ: egyből megjelenik a start gomb, amire ha rákattintok, akkor megjelenik az én bábum.
+            var winners = from p in topplayers
+                          where !p.IsWinner
+                          select p;*/
+
             if (winners.Count()>0)
             {
                 winnerBrain = winners.FirstOrDefault().Brain.Clone();
                 gc.GameOver -= Gc_GameOver;
+                startButton.Visible = true;
                 return;
             }
         }
 
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            //visszaállítja az aktuális szintet, eltávolítja a játékosokat a players listából.
+            gc.ResetCurrentLevel();
+
+            //Visszateri azt a játékost, aki nyert
+            gc.AddPlayer(winnerBrain.Clone());
+
+            //hozzáad saját magunkat
+            gc.AddPlayer();
+
+            //Ha rányomunki a START-re akkor a fókusz átmegy a gombra, így automatikusan a billenytűzetre fog kerülni a fókusz
+            ga.Focus();
+
+            //játék indítása. Ha mi akarjuk iránytani a játékost:
+            gc.Start(true);
+        }
     }
 }
