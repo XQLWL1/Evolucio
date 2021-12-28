@@ -19,6 +19,12 @@ namespace Evolucio
         GameController gc = new GameController();
         GameArea ga = new GameArea();
 
+        //Induló populáció felépítése
+        int populationSize = 100;
+        int nbrOfSteps = 10;
+        int nbrOfStepsIncrement = 10;
+        int generation = 1;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,14 +32,22 @@ namespace Evolucio
             this.Controls.Add(ga);
 
 
-            //játékos hozzáadása
-            gc.AddPlayer();
+            //egy játékos hozzáadása
+            //gc.AddPlayer();
 
-            //játék elindítása
+            //játék elindítása, gépi vezérlés
             //gc.Start();
 
             //játék indítása. Ha mi akarjuk iránytani a játékost:
             //gc.Start(true);
+
+            //több játékos hozzáadása
+            for (int i = 0; i < populationSize; i++)
+            {
+                gc.AddPlayer(nbrOfSteps);
+            }
+
+            gc.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
